@@ -1,7 +1,6 @@
 # phpLiteAdmin
 
 Website: http://www.phpliteadmin.org/
-
 Bitbucket: https://bitbucket.org/phpliteadmin/public/
 
 ## What is phpLiteAdmin?
@@ -13,48 +12,29 @@ that is dropped into a directory on a server and then visited in a browser.
 There is no installation required. The available operations, feature set,
 interface, and user experience is comparable to that of phpMyAdmin.
 
-## Configuration
+## Installation
 
-**NEW** as of 1.9.4: You can now configure phpLiteAdmin in an external file. If
-you want to do this:
-
--   rename `phpliteadmin.config.sample.php` into `phpliteadmin.config.php`
--   do not change the settings in `phpliteadmin.php` but in
-    `phpliteadmin.config.php`
-
-See https://bitbucket.org/phpliteadmin/public/wiki/Configuration for details.
-
-1.   Open `phpliteadmin.config.php` (or `phpliteadmin.php` before 1.9.4) in
-     a text editor.
+	1. Open phpliteadmin.php in a text editor.
 	
-2.   If you want to have a directory scanned for your databases instead of
-     listing them manually, specify the directory as the value of the 
-     `$directory` variable and skip to step 4. 
+	2. If you want to have a directory scanned for your databases instead of listing them manually, 
+	specify the directory as the value of the $directory variable and skip to step 4. 
 	
-3.   If you want to specify your databases manually, set the value of the
-     `$directory` variable as false and modify the `$databases` array to
-     hold the databases you would like to manage.
+	3. If you want to specify your databases manually, set the value of the $directory variable as false 
+	and modify the $databases array to hold the databases you would like to manage.
 	
-    -   The path field is the file path of the database relative to where
-        `phpliteadmin.php` will be located on the server. For example, if
-        `phpliteadmin.php` is located at "databases/manager/phpliteadmin.php" and
-        you want to manage "databases/yourdatabase.sqlite", the path value
-        would be "../yourdatabase.sqlite".
+		- The path field is the file path of the database relative to where phpliteadmin.php will be located on the server. For example, if phpliteadmin.php is located at "databases/manager/phpliteadmin.php" and you want to manage "databases/yourdatabase.sqlite", the path value would be "../yourdatabase.sqlite".
 		
-    -   The name field is the human-friendly way of referencing the database
-        within the application. It can be anything you want.
+		- The name field is the human-friendly way of referencing the database within the application. It can be anything you want.
 
-4.   Modify the `$password` variable to be the password used for gaining access
-     to the phpLiteAdmin tool.
+	4. Modify the $password variable to be the password used for gaining access to the phpLiteAdmin tool.
 	
-5.   If you want to have multiple installations of phpLiteAdmin on the same
-     server, change the `$cookie_name` variable to be unique for each installation
-     (optional).
+	5. If you want to have multiple installations of phpLiteAdmin on the same server, 
+	change the $cookie_name variable to be unique for each installation (optional).
 
-6.   Save and upload `phpliteadmin.php` to your web server.
+	6. Save and upload phpliteadmin.php to your web server.
 	
-7.   Open a web browser and navigate to the uploaded `phpliteadmin.php` file. You
-     will be prompted to enter a password. Use the same password you set in step 4.
+	7. Open a web browser and navigate to the uploaded phpliteadmin.php file. 
+	You will be prompted to enter a password. Use the same password you set in step 4.
 
 ## News
 
