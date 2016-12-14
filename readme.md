@@ -22,7 +22,9 @@ interface, and user experience is comparable to that of phpMyAdmin.
 	3. If you want to specify your databases manually, set the value of the $directory variable as false 
 	and modify the $databases array to hold the databases you would like to manage.
 	
-		- The path field is the file path of the database relative to where phpliteadmin.php will be located on the server. For example, if phpliteadmin.php is located at "databases/manager/phpliteadmin.php" and you want to manage "databases/yourdatabase.sqlite", the path value would be "../yourdatabase.sqlite".
+		- The path field is the file path of the database relative to where phpliteadmin.php will be located on the server. 
+		For example, if phpliteadmin.php is located at "databases/manager/phpliteadmin.php" 
+		and you want to manage "databases/yourdatabase.sqlite", the path value would be "../yourdatabase.sqlite".
 		
 		- The name field is the human-friendly way of referencing the database within the application. It can be anything you want.
 
