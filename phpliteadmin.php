@@ -11,37 +11,7 @@
 //	   Christopher Kramer (crazy4chrissi@gmail.com, http://en.christosoft.de)
 //	   Ayman Teryaki (http://havalite.com)
 //	   Dreadnaut (dreadnaut@gmail.com, http://dreadnaut.altervista.org)
-//	
-//	
-//	Copyright (C) 2016, phpLiteAdmin
-//	
-//	This program is free software: you can redistribute it and/or modify
-//	it under the terms of the GNU General Public License as published by
-//	the Free Software Foundation, either version 3 of the License, or
-//	(at your option) any later version.
-//	
-//	This program is distributed in the hope that it will be useful,
-//	but WITHOUT ANY WARRANTY; without even the implied warranty of
-//	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//	GNU General Public License for more details.
-//	
-//	You should have received a copy of the GNU General Public License
-//	along with this program.  If not, see <http://www.gnu.org/licenses/>.
-//	
-//	////////////////////////////////////////////////////////////////////////
-//	
-//	Please report any bugs you may encounter to our issue tracker here:
-//		https://bitbucket.org/phpliteadmin/public/issues?status=new&status=open
-
 //
-// This is sample configuration file
-//
-// You can configure phpliteadmin in one of 2 ways:
-// 1. Rename phpliteadmin.config.sample.php to phpliteadmin.config.php and change parameters in there.
-//    You can set only your custom settings in phpliteadmin.config.php. All other settings will be set to defaults.
-// 2. Change parameters directly in main phpliteadmin.php file
-//
-// Please see https://bitbucket.org/phpliteadmin/public/wiki/Configuration for more details
 
 //password to gain access
 $password = 'admin';
