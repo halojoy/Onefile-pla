@@ -12,7 +12,7 @@ that is dropped into a directory on a server and then visited in a browser.
 There is no installation required. The available operations, feature set,
 interface, and user experience is comparable to that of phpMyAdmin.
 
-## Installation
+## Configuration
 
 	1. Open phpliteadmin.php in a text editor.
 	
