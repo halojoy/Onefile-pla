@@ -51,7 +51,6 @@ interface, and user experience is comparable to that of phpMyAdmin.
 
 -   Lightweight - consists of a single 200KB source file for portability
 -   Supports SQLite3 and SQLite2 databases
--   Translated and available in over 10 languages - and counting
 -   Specify and manage an unlimited number of databases
 -   Specify a directory and optionally its subdirectories to scan for databases
 -   Create and delete databases
@@ -66,7 +65,6 @@ interface, and user experience is comparable to that of phpMyAdmin.
 -   Create and run your own custom SQL queries in the free-form query editor/builder
 -   Easily apply core SQLite functions to column values using the GUI
 -   Write your own PHP functions to be available to apply to column values
--   Design your own theme using CSS or install a pre-made theme from the community
 -   All presented in an intuitive, easy-to-use GUI that allows non-technical, SQL-illiterate users to fully manage databases 
 -   Allows multiple installations on the same server, each with a different password
 -   Secure password-protected interface with login screen and cookies
@@ -107,25 +105,12 @@ Bitbucket: https://bitbucket.org/phpliteadmin/public/src
 You are welcome to fork the project and send us pull requests on any of these
 platforms.
 
-## Installing a theme
-	
-1.   Download the themes package from the project Downloads page.
-	
-2.   Unzip the file and choose your desired theme.
-	
-3.   Upload `phpliteadmin.css` from the theme's directory alongside
-     `phpliteadmin.php`.
-	
-4.   Your theme will automatically override the default.
-
-
 ## Getting help
 
 The project's wiki provides information on how to do certain things and is
 located at https://bitbucket.org/phpliteadmin/public/wiki/Home .
 In addition, the project's discussion group is located at
 http://groups.google.com/group/phpliteadmin .
-
 
 ## Reporting errors and bugs
 
