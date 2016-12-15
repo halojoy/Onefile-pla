@@ -1,9 +1,8 @@
 <?php
-//	
 //	Project: phpLiteAdmin (http://www.phpliteadmin.org/)
-//	Version: 1.9.7
+//	Version: 1.9.7.1
 //	Summary: PHP-based admin tool to manage SQLite2 and SQLite3 databases on the web
-//	Last updated: 2016-12-13
+//	Last updated: 2016-12-14
 //	Developers:
 //	   Dane Iracleous (daneiracleous@gmail.com)
 //	   Ian Aldrighetti (ian.aldrighetti@gmail.com)
@@ -11,7 +10,6 @@
 //	   Christopher Kramer (crazy4chrissi@gmail.com, http://en.christosoft.de)
 //	   Ayman Teryaki (http://havalite.com)
 //	   Dreadnaut (dreadnaut@gmail.com, http://dreadnaut.altervista.org)
-//
 
 //password to gain access
 $password = 'admin';
@@ -35,15 +33,7 @@ $databases = array(
 	),
 );
 
-
 /* ---- Interface settings ---- */
-
-// Theme! If you want to change theme, save the CSS file in same folder of phpliteadmin or in folder "themes"
-$theme = 'phpliteadmin.css';
-
-// the default language! If you want to change it, save the language file in same folder of phpliteadmin or in folder "languages"
-// More about localizations (downloads, how to translate etc.): https://bitbucket.org/phpliteadmin/public/wiki/Localization
-$language = 'en';
 
 // set default number of rows. You need to relog after changing the number
 $rowsNum = 30;
@@ -61,17 +51,8 @@ $maxSavedQueries = 10;
 $custom_functions = array(
 	'md5', 'sha1', 'time', 'strtotime',
 	// add the names of your custom functions to this array
-	/* 'leet_text', */
 );
-
 // define your custom functions here
-/*
-function leet_text($value)
-{
-  return strtr($value, 'eaAsSOl', '344zZ01');
-}
-*/
-
 
 /* ---- Advanced options ---- */
 
@@ -83,7 +64,6 @@ $debug = false;
 
 // the user is allowed to create databases with only these extensions
 $allowed_extensions = array('db','db3','sqlite','sqlite3');
-
 
 // English language-texts.
 // Read our wiki on how to translate: https://bitbucket.org/phpliteadmin/public/wiki/Localization
@@ -385,16 +365,9 @@ $lang = array(
 
 //- Initialization
 
-// load optional configuration file
-$config_filename = './phpliteadmin.config.php';
-if (is_readable($config_filename))
-{
-	include_once $config_filename;
-}
-
 //constants 1
 define("PROJECT", "phpLiteAdmin");
-define("VERSION", "1.9.7");
+define("VERSION", "1.9.7.1");
 define("PAGE", basename(__FILE__));
 define("FORCETYPE", false); //force the extension that will be used (set to false in almost all circumstances except debugging)
 define("SYSTEMPASSWORD", $password); // Makes things easier.
@@ -459,39 +432,9 @@ if($debug==true)
 // start the timer to record page load time
 $pageTimer = new MicroTimer();
 
-// load language file
-if($language != 'en') {
- 	$temp_lang=$lang;
-	if(is_file('languages/lang_'.$language.'.php'))
-		include('languages/lang_'.$language.'.php');
-	elseif(is_file('lang_'.$language.'.php'))
-		include('lang_'.$language.'.php');
-	$lang = array_merge($temp_lang, $lang);
-	unset($temp_lang);
-}
 // version-number added so after updating, old session-data is not used anylonger
 // cookies names cannot contain symbols, except underscores
 define("COOKIENAME", preg_replace('/[^a-zA-Z0-9_]/', '_', $cookie_name . '_' . VERSION) );
-
-// stripslashes if MAGIC QUOTES is turned on
-// This is only a workaround. Please better turn off magic quotes!
-// This code is from http://php.net/manual/en/security.magicquotes.disabling.php
-if (get_magic_quotes_gpc()) {
-	$process = array(&$_GET, &$_POST, &$_COOKIE, &$_REQUEST);
-	while (list($key, $val) = each($process)) {
-		foreach ($val as $k => $v) {
-			unset($process[$key][$k]);
-			if (is_array($v)) {
-				$process[$key][stripslashes($k)] = $v;
-				$process[] = &$process[$key][stripslashes($k)];
-			} else {
-				$process[$key][stripslashes($k)] = stripslashes($v);
-			}
-		}
-	}
-	unset($process);
-}
-
 
 //data types array
 $sqlite_datatypes = array("INTEGER", "REAL", "TEXT", "BLOB","NUMERIC","BOOLEAN","DATETIME");
@@ -944,18 +887,8 @@ header('Content-Type: text/html; charset=utf-8');
 <title><?php echo PROJECT ?></title>
 
 <?php
-//- HTML: css/theme include
-if(isset($_GET['theme'])) $theme = basename($_GET['theme']);
-
-// allow themes to be dropped in subfolder "themes"
-if(is_file('themes/'.$theme)) $theme = 'themes/'.$theme;
-
-if (file_exists($theme))
-	// an external stylesheet exists - import it
-	echo "<link href='{$theme}' rel='stylesheet' type='text/css' />", PHP_EOL;
-else
-	// only use the default stylesheet if an external one does not exist
-	echo "<link href='?resource=css' rel='stylesheet' type='text/css' />", PHP_EOL;
+// only use the default stylesheet if an external one does not exist
+echo "<link href='?resource=css' rel='stylesheet' type='text/css' />", PHP_EOL;
 
 // HTML: output help text, then exit
 if(isset($_GET['help']))
@@ -5606,7 +5539,6 @@ class Database
 			echo "COMMIT;\r\n";
 	}
 }
-
 //	class MicroTimer (issue #146)
 //	wraps calls to microtime(), calculating the elapsed time and rounding output
 //
