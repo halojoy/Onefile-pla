@@ -391,12 +391,7 @@ session_start();
 // generate CSRF token 
 if (empty($_SESSION['token']))
 {
-	if (function_exists('mcrypt_create_iv'))
-	{
-		$_SESSION['token'] = bin2hex(mcrypt_create_iv(32, MCRYPT_DEV_URANDOM));
-	} else {
-		$_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(32));
-	}
+	$_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(32));
 }
 $token = $_SESSION['token'];
 $token_html = '<input type="hidden" name="token" value="'.$token.'" />';
