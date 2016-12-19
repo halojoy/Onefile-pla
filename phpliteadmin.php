@@ -1,6 +1,6 @@
 <?php
 //	Project: phpLiteAdmin (http://www.phpliteadmin.org/)
-//	Version: 1.9.7.1
+//	Version: 1.9.7.3one
 //	Summary: PHP-based admin tool to manage SQLite2 and SQLite3 databases on the web
 //	Last updated: 2016-12-14
 //	Developers:
@@ -367,7 +367,7 @@ $lang = array(
 
 //constants 1
 define("PROJECT", "phpLiteAdmin");
-define("VERSION", "1.9.7.1");
+define("VERSION", "1.9.7.3one");
 define("PAGE", basename(__FILE__));
 define("FORCETYPE", false); //force the extension that will be used (set to false in almost all circumstances except debugging)
 define("SYSTEMPASSWORD", $password); // Makes things easier.
