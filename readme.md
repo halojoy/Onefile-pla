@@ -104,8 +104,8 @@ platforms.
 
 ## Getting help
 
-The project's wiki provides information on how to do certain things and is
-located at https://bitbucket.org/phpliteadmin/public/wiki/Home .
+The project's wiki provides information on how to do certain things and
+is located at https://bitbucket.org/phpliteadmin/public/wiki/Home .
 In addition, the project's discussion group is located at
 http://groups.google.com/group/phpliteadmin .
 
