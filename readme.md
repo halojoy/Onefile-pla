@@ -12,3 +12,4 @@ that is dropped into a directory on a server and then visited in a browser.
 There is no installation required. The available operations, feature set,
 interface, and user experience is comparable to that of phpMyAdmin.
 
+![image](images/gallery1.jpg)
